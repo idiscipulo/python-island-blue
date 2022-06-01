@@ -1,0 +1,1 @@
+from src.monster.monster_list import *

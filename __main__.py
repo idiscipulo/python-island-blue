@@ -1,8 +1,11 @@
 import curses
+import sys
 from time import time, sleep
 
-from town import Town
-from battle import Battle
+from src.scenes import Town
+from src.scenes import Battle
+
+from src.player import Player
 
 def main(scr):
     curses.curs_set(False)
@@ -11,7 +14,10 @@ def main(scr):
     cur_state = "TOWN"
     states = {
         "TOWN": Town(),
-        "BATTLE": Battle()
+        "BATTLE": Battle(
+            player1=Player(),
+            player2=Player()
+        )
     }
 
     while True:
@@ -35,4 +41,17 @@ def main(scr):
         sleep(delay)
  
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        if sys.argv[1].lower() == "dev":
+            print("[INFO] Generating new monster_list from source")
+
+            from dev_tools.monster_factory import generate_monster_list_from_metadata
+            generate_monster_list_from_metadata(
+                src="include/monster_list.json",
+                dest="src/monster/monster_list.py"
+            )
+
+    print("[INFO] Starting game...")
     curses.wrapper(main)
+
+    print("[INFO] Game exited succesfully...")

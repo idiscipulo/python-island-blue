@@ -1,0 +1,16 @@
+{
+    "monsters": [
+        {
+            "name": "SPARROW",
+            "faction": "AIR",
+            "base_hp": 10,
+            "hp_scale": 1
+        },
+        {
+            "name": "SHARK",
+            "faction": "WATER",
+            "base_hp": 12,
+            "hp_scale": 1
+        }
+    ]
+}
