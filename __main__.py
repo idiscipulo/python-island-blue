@@ -7,6 +7,16 @@ from src.scenes import Battle
 
 from src.player import Player
 
+def draw_border(scr):
+    width = 112
+    height = 28
+
+    scr.addstr(0, 0, f"+——————————————————————————————————————————————————————————————————————————————————————————————————————————————+")
+    for y in range(height - 1):
+        scr.addstr(y + 1, 0, f"|{'':110}|")
+    scr.addstr(25, 0, f"+——————————————————————————————————————————————————————————————————————————————————————————————————————————————+")
+    scr.addstr(27, 0, f"+——————————————————————————————————————————————————————————————————————————————————————————————————————————————+")
+
 def main(scr):
     curses.curs_set(False)
     scr.nodelay(True)
@@ -24,6 +34,8 @@ def main(scr):
         s_time = time()
 
         scr.clear()
+
+        draw_border(scr)
 
         key = scr.getch()
         if key == 27:
@@ -45,8 +57,8 @@ if __name__ == "__main__":
         if sys.argv[1].lower() == "dev":
             print("[INFO] Generating new monster_list from source")
 
-            from dev_tools.monster_factory import generate_monster_list_from_metadata
-            generate_monster_list_from_metadata(
+            from dev_tools.monster_factory import generate_monster_list_from_json
+            generate_monster_list_from_json(
                 src="include/monster_list.json",
                 dest="src/monster/monster_list.py"
             )

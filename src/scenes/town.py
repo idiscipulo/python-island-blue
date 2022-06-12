@@ -11,5 +11,6 @@ class Town:
             return None
 
     def draw(self, scr):
-        scr.addstr(0, 0, "press [q] -> Gun Shop")
-        scr.addstr(1, 0, "press [w] -> Battle")
+        scr.addstr(1, 2, "press [q] -> Gun Shop")
+        scr.addstr(2, 2, "press [w] -> Battle")
+        scr.addstr(26, 2, "[Esc] QUIT")
