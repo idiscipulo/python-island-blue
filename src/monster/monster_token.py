@@ -20,9 +20,9 @@ class MonsterToken:
         name_str = self.monster.name[:20]
         faction_str = self.monster.faction
 
-        scr.addstr(y, x, "+——————————————————————+") 
+        scr.addstr(y, x, "■——————————————————————■") 
         scr.addstr(y + 1, x, f"| {name_str:^20} |")
-        scr.addstr(y + 2, x, "+——————————————————————+")
+        scr.addstr(y + 2, x, "■——————————————————————■")
         scr.addstr(y + 3, x, f"| HP :                 |")
         self.draw_health_bar(scr, y + 3, x + 7)
-        scr.addstr(y + 4, x, f"+———————[{faction_str:^5}]————————+")
+        scr.addstr(y + 4, x, f"■———————[{faction_str:^5}]————————■")
