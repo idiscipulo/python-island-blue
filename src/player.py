@@ -5,7 +5,8 @@ class Player:
         self.monster_list = [
             monsters.EaterOfFoes(1),
             monsters.Sparrow(1),
-            monsters.Shark(3)
+            monsters.Shark(1),
+            monsters.Sparrow(1)
         ]
 
         self.active_monsters = []

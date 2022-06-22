@@ -2,6 +2,8 @@ import curses
 import sys
 from time import time, sleep
 
+from src.color import setup_color
+
 from src.scenes import Town
 from src.scenes import Battle
 
@@ -20,6 +22,8 @@ def draw_border(scr):
 def main(scr):
     curses.curs_set(False)
     scr.nodelay(True)
+
+    setup_color()
 
     cur_state = "TOWN"
     states = {

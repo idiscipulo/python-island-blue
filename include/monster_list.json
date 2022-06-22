@@ -3,19 +3,19 @@
         {
             "name": "SPARROW",
             "faction": "AIR",
-            "base_hp": 10,
+            "base_hp": 8,
             "hp_scale": 1
         },
         {
             "name": "SHARK",
             "faction": "WATER",
-            "base_hp": 12,
+            "base_hp": 9,
             "hp_scale": 1
         },
         {
             "name": "EATER OF FOES",
             "faction": "DEMON",
-            "base_hp": 46,
+            "base_hp": 12,
             "hp_scale": 5
         }
     ]

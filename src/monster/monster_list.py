@@ -7,7 +7,7 @@ class EaterOfFoes(Monster):
             level=level,
             faction="DEMON",
             cur_hp=cur_hp,
-            base_hp=46
+            base_hp=12
         )
 
 class Shark(Monster):
@@ -17,7 +17,7 @@ class Shark(Monster):
             level=level,
             faction="WATER",
             cur_hp=cur_hp,
-            base_hp=12
+            base_hp=9
         )
 
 class Sparrow(Monster):
@@ -27,5 +27,5 @@ class Sparrow(Monster):
             level=level,
             faction="AIR",
             cur_hp=cur_hp,
-            base_hp=10
+            base_hp=8
         )
